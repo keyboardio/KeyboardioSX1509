@@ -536,8 +536,6 @@ unsigned int sx1509Class::readWord(byte registerAddress)
 //	- No return value.
 void sx1509Class::readBytes(byte firstRegisterAddress, byte * destination, byte length)
 {
-	byte readValue;
-
 	Wire.beginTransmission(deviceAddress);
 	Wire.write(firstRegisterAddress);
 	Wire.endTransmission();
